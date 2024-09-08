@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora</title>
+    <link rel="stylesheet" href="/style.css"/> 
+</head>
+<body>
+    <h1>Here is the post you asked for</h1>
+    <% if (post) { %>
+        <h2>Post id is <%= post.id %></h2>
+        <div class="post">
+            <div class="user"><u>@<%= post.username %></u></div>
+            <div class="content"><%= post.content %></div>
+        </div>
+    <% } else { %>
+        <p>Post not found</p>
+    <% } %>
+    <a href="http://localhost:8080/posts">Back to all posts</a>
+</body>
+</html>

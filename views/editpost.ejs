@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora</title>
+    <link rel="stylesheet" href="/style.css"/>  
+</head>
+<body>
+    <h1>Edit the Post</h1>
+    <% if (post) { %>
+        <h2>Post id is <%= post.id %></h2>
+        <div class="post">
+            <div class="user"><u>@<%= post.username %></u></div>
+        
+        </div>
+        <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+                  <div><textarea name="content" class="area"> <%= post.content %>  </textarea></div>   
+                  <br>   
+                  <button class="edit">Edit</button>
+        </form>
+    <% } else { %>
+        <p>Post not found</p>
+    <% } %>
+    <br>
+    <a href="http://localhost:8080/posts">Back to all posts</a>
+</body>
+</html>
