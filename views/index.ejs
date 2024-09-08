@@ -14,9 +14,9 @@
    <div class="post">
     <div class="user"> <u>@<%=post.username%> </u> </div>
     <div class="content"> <%=post.content%> </div>
-    <div class="links">
-         <a href="http://localhost:8080/posts/<%=post.id%>">See in detail</a> 
-         <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit Post</a>
+    <div class="links" style="display:flex; gap: 1rem; margin-bottom: 0.5rem;">
+         <form action="/posts/<%=post.id%>"> <button class="style"> Details </button></form> 
+         <form action="/posts/<%=post.id%>/edit"><button class="style">Edit Post  </button></form>
     </div>
     <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
             <div><button class="button">Delete Post</button></div>
