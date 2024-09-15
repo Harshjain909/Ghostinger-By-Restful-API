@@ -1,1 +1,1 @@
-https://quorabyharsh.onrender.com
+https://quorabyharsh.onrender.com/posts
