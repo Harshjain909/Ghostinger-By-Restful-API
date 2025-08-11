@@ -35,7 +35,7 @@ let posts = [
 ]
 
 //Home page INDEX get request API
-app.get("/posts",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("index.ejs",{posts});
 })
 
